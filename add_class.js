@@ -13,20 +13,18 @@ function clickHandler() {
     //div.onclick = "location.href='classpage.html?class='" + this.id;
     div.setAttribute("class", "section");
     div.setAttribute("id", "Class");
-    div.setAttribute("onclick", "location.href='classpage.html?class=this.id;");
-    div.setAttribute("onclick", "location.href='home.html';");
-    div.setAttribute("style", "cursor: pointer;");
+    //div.setAttribute("onclick", "location.href='home.html';");
+    //div.setAttribute("style", "cursor: pointer;");
     
-    let headdiv = document.createElement("div");
-    headdiv.setAttribute("style", "pointer-events: none;");
     let header = document.createElement("h1");
     header.appendChild(document.createTextNode("Class"));
     header.setAttribute("contenteditable", "true");
-    headdiv.appendChild(header);
-    div.appendChild(headdiv);
+    div.appendChild(header);
 
     let imgdiv = document.createElement("div");
     imgdiv.setAttribute("class", "imgdiv");
+    imgdiv.setAttribute("onclick", "location.href='classpage.html?class=Class';");
+    imgdiv.setAttribute("style", "cursor: pointer;");
     let img = document.createElement("img");
     img.src = "thonq.png";
     imgdiv.appendChild(img);
