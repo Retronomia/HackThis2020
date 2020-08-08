@@ -50,8 +50,6 @@ body{
     overflow:hidden;
     width:100%;
     display:inline-block;
-    margin: 0;
-    padding:0;
 }
 .header #right a{
     transition: 0.3s;
@@ -150,6 +148,8 @@ body{
     padding-bottom:2em;*/
     align-items:center;
     margin:0;
+    background-color:#102544;
+    overflow:hidden;
 }
 .subsection .section{
     align-items:center;
