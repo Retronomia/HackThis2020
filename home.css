@@ -115,26 +115,45 @@ body{
     display:inline-block;
 }
 .subsection{
-    background-color:#501F3A;
+    /*background-color:#501F3A;*/
     margin-top:5em;
     margin-left:10%;
     margin-right:10%;
-    padding-top: 1em;
+    padding-top: 2em;
     padding-left: 2vw;
     padding-right: 2vw;
-    padding-bottom:3em;
+    padding-bottom:2em;
+    align-items:center;
 }
 .subsection #section{
-    text-align:center;
+    align-items:center;
     margin-left: 5vw;
     padding:0;
-    padding-bottom:1vw;
-    background-color: #CCCCCC;
+    padding-bottom:1em;
+    background-color:#501F3A;
     display:inline-flex;
     width: 18vw;
+    align-items: center;
+    justify-content: center;
+    flex-wrap:wrap;
 }
 .subsection #section h1{
     color:#fc3789;
     font-weight: bold;
     font-size: 2em;
+    text-align:center;
+    min-width: 100%
+}
+.subsection #section p{
+    color:#e9e9e9;
+    font-size: 1em;
+}
+.subsection #section img{
+    width:8vw;
+    height:auto;
+}
+.subsection #section #imgdiv{
+    min-width: 100%;
+    text-align:center;
+    height:auto;
 }
