@@ -1,6 +1,24 @@
 function clickHandler() {
-    let x = document.createElement("P");                        // Create a <p> element
-    let t = document.createTextNode("This is a paragraph.");    // Create a text node
-    x.appendChild(t);                                           // Append the text to <p>
-    document.body.appendChild(x);   
+    let div = document.createElement("div");
+    div.setAttribute("id", "section");
+    
+
+    let header = document.createElement("h1");
+    header.appendChild(document.createTextNode("Class name"));
+    div.appendChild(header);
+
+    let imgdiv = document.createElement("div");
+    imgdiv.setAttribute("id", "imgdiv");
+    let img = document.createElement("img");
+    img.src = "thonq.png";
+    imgdiv.appendChild(img);
+    div.appendChild(imgdiv);
+
+    let p = document.createElement("p");
+    p.appendChild(document.createTextNode("Text"));
+    div.appendChild(p);
+
+    document.getElementById('classes').appendChild(div);  
+
+    //document.body.appendChild(div);   
 }
