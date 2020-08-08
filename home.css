@@ -71,7 +71,7 @@ body{
     text-decoration: none;
 }
 .header #right a:hover{
-    background-color:#501F3A;
+    background-color:#1c4953;
 }
 .header #left{
     float:left;
@@ -79,7 +79,7 @@ body{
 .header #left a{
     color:#66FCF1;
     display:inline-block;
-    font-size: 1.5em;
+    font-size: 1.55em;
     padding-top:.2em;
     padding-left: .5em;
     padding-right: .5em;
@@ -89,7 +89,7 @@ body{
     text-decoration: none;
 }
 .header #left a:hover{
-    background-color: #501F3A;
+    background-color: #1c4953;
 }
 .center{
     background-color:#501F3A;
@@ -112,7 +112,6 @@ body{
     font-weight: bold;
     text-align:center;
     padding-bottom:1em;
-    display:inline-block;
 }
 .subsection{
     /*background-color:#501F3A;*/
@@ -142,11 +141,15 @@ body{
     font-weight: bold;
     font-size: 2em;
     text-align:center;
-    min-width: 100%
+    width:15vw;
+    word-wrap: break-word;
 }
 .subsection #section p{
     color:#e9e9e9;
     font-size: 1em;
+    word-wrap: break-word;
+    width:12vw;
+    text-align:center;
 }
 .subsection #section img{
     width:8vw;
