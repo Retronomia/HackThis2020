@@ -5,6 +5,7 @@ function clickHandler() {
 
     let header = document.createElement("h1");
     header.appendChild(document.createTextNode("Class name"));
+    header.setAttribute("contenteditable", "true");
     div.appendChild(header);
 
     let imgdiv = document.createElement("div");
