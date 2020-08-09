@@ -33,3 +33,10 @@ function movePanels(className){
       }
     });
 }
+
+function enableEditMode(){
+  richText.document.designMode = 'On';
+}
+function execCmd(command){
+  richtext.document.execCommand(command, false, null);
+}

@@ -125,12 +125,17 @@ body{
     font-weight: normal;
     padding-bottom:1em;
 }
-.center img{
+#duck{
+    width: 15em;
+    float:right;
+    margin-right:25em;
+}
+.center a img{
     height: auto;
     width: 30em;
     transition: 0.3s;
 }
-.center img:hover{
+.center a img:hover{
     background-color: #2a665a;
 }
 .center hr{

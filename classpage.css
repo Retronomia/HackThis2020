@@ -116,6 +116,14 @@
     height:95vh;
     overflow: hidden;
 }
+.sectionright #richtext{
+    height:100px;
+    width: fit-content;
+    flex-grow: 1;
+    float:right;
+    background-color: red;
+    border:none;
+}
 @media only screen and (max-width: 1020px) {
     .header #right a{
         font-size: 1em;
