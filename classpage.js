@@ -33,10 +33,32 @@ function movePanels(className){
       }
     });
 }
-
+var showingSourceCode = false;
+var isInEditMode = true;
 function enableEditMode(){
   richText.document.designMode = 'On';
 }
 function execCmd(command){
-  richtext.document.execCommand(command, false, null);
+  richText.document.execCommand(command, false, null);
+}
+function execCmdWithArg(command,arg){
+  richText.document.execCommand(command, false, arg);
+}
+function toggleSource(){
+  if (showingSourceCode){
+    richText.document.getElementByTagName('body')[0].innerHTML = richText.document.getElementByTagName('body')[0].textContent;
+    showingSourceCode= false;
+  }else{
+    richText.document.getElementByTagName('body')[0].innerHTML = richText.document.getElementByTagName('body')[0].innerHTML;
+    showingSourceCode= true;
+  }
+}
+function toggleEdit(){
+  if(isInEditMode){
+    richText.document.designMode='Off';
+    isInEditMode = false;
+  }else{
+    richText.document.designMode='On';
+    isInEditMode = true;
+  }
 }

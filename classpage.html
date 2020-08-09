@@ -11,8 +11,9 @@
         <script src="classpage.js"></script>
         <link rel="icon" href="duccicon.png">
         <title>ANOTHER DUCKLING NOTE APP</title>
+        <script src="https://kit.fontawesome.com/8f2b175dec.js" crossorigin="anonymous"></script>
     </head>
-    <body onload="hideTd('td'); movePanels('td');">
+    <body onload="hideTd('td'); movePanels('td'); enableEditMode();">
     <div class='main-container'>
     <div class="header">
         <div id="left">
@@ -46,7 +47,56 @@
         </div><!--
         --><div class='sectionright'>
             <div id="dragbar"></div>
-            <button onClick=""><img src="thonq.png"></img></button>
+            <div id='textEditInfo'>
+                <button onClick="execCmd('bold')"><i class="fa fa-bold"></i></button>
+                <button onClick="execCmd('italic')">><i class="fa fa-italic"></i></button>
+                <button onClick="execCmd('underline')">><i class="fa fa-underline"></i></button>
+                <button onClick="execCmd('strikeThrough')">><i class="fa fa-strikethrough"></i></button>
+                <!---->
+                <button onClick="execCmd('justifyLeft')"><i class="fa fa-align-left"></i></button>
+                <button onClick="execCmd('justifyCenter')"><i class="fa fa-align-center"></i></button>
+                <button onClick="execCmd('justifyRight')"><i class="fa fa-align-right"></i></button>
+                <button onClick="execCmd('justifyFull')"><i class="fa fa-align-justify"></i></button>
+                <button onClick="execCmd('cut')"><i class="fa fa-cut"></i></button>
+                <button onClick="execCmd('copy')"><i class="fa fa-copy"></i></button>
+                <button onClick="execCmd('indent')"><i class="fa fa-indent"></i></button>
+                <button onClick="execCmd('outdent')"><i class="fa fa-dedent"></i></button>
+                <button onClick="execCmd('subscript')"><i class="fa fa-subscript"></i></button>
+                <button onClick="execCmd('superscript')"><i class="fa fa-superscript"></i></button>
+                <button onClick="execCmd('undo')"><i class="fa fa-undo"></i></button>
+                <button onClick="execCmd('redo')"><i class="fa fa-repeat"></i></button>
+                <button onClick="execCmd('insertUnorderedList')"><i class="fa fa-list-ul"></i></button>
+                <button onClick="execCmd('insertOrderedList')"><i class="fa fa-list-ol"></i></button>
+                <button onClick="execCmd('insertParagraph')"><i class="fa fa-paragraph"></i></button>
+                <select onclick="execCommandWithArg('formatBlock',this.value)">
+                    <option value="HR">HR</button>
+                    <option value="H1">H1</button>
+                    <option value="H2">H2</button>
+                    <option value="H3">H3</button>
+                    <option value="H4">H4</button>
+                    <option value="H5">H5</button>
+                    <option value="H6">H6</button>
+                </select>
+                <button onClick="execCmd('insertHorizontalRule')">HR</button>
+                <button onClick="execCmdWithArg('createLink',prompt('Enter a URL','http://'))"><i class="fa fa-link"></i></button>
+                <button onClick="execCmd('unlink')"><i class="fa fa-unlink"></i></button>
+                <button onClick="toggleSource()"><i class="fa fa-code"></i></button>
+                <button onClick="toggleEdit()">Toggle Edit</button>
+                <input onkeydown="execCommandWithArg('fontSize',this.value)" type="number"  placeholder="8"/>
+                <select onclick="execCommandWithArg('fontName',this.value)">
+                    <option value="Arial">Arial</button>
+                    <option value="Comic Sans MS">Comic Sans MS</button>
+                    <option value="Courier">Courier</button>
+                    <option value="Georgia">Georgia</button>
+                    <option value="Tahoma">Tahoma</button>
+                    <option value="Times New Roman">Times New Roman</button>
+                    <option value="Verdana">Verdana</button>
+                </select>
+                Fore Color: <input onclick="execCommandWithArg('foreColor',this.value)" type='color'/>
+                Background: <input onclick="execCommandWithArg('hiliteColor',this.value)" type='color'/>
+                <button onClick="execCommandWithArg('insertImage',prompt('Enter the image URL',''))"><i class="fa fa-file-image-o"></i></button>
+                <button onClick="execCmd('selectAll')">Select All</button>
+            </div>
             <iframe name='richText' id='richtext'></iframe>
         </div>
     </div>
