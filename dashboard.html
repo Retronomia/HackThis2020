@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="home.css">
+        <link rel="stylesheet" type="text/css" href="dashboard.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	    <!--<link rel="stylesheet" type="text/css" href="home_mobile.css" media="screen  and (max-width: 40em)"/>-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,10 +12,11 @@
     <body>
     <div class='main-container'>
         <div class="header">
-            <div id="left"><a href = "home.html">WEBSITE</h1></a></div>
+            <div id="left"><a href = "home.html" class=""><img src="title.png"></img></a></div>
             <div id="right">
-                <a href="dashboard.html">Notes</a>
-                <a href="Login_page/login.html">Sign In</a>
+                <a href="classpage.html"class="">(TEMP)Class Page</a>
+                <a href="dashboard.html"class="">Notes</a>
+                <a href="Login_page/login.html"class="">Sign In</a>
             </div>
         </div>
         <div class="center">
@@ -24,17 +26,11 @@
                 Vestibulum quis arcu diam. Phasellus finibus ultrices est eu fringilla. Ut sed nibh fermentum, malesuada justo vitae, 
                 fermentum lectus. Nullam elementum tortor ipsum, non pellentesque mi lacinia ut. Duis luctus leo a nunc lacinia laoreet. 
                 Curabitur id venenatis risus, vitae eleifend dui. Integer sed nisl ac tortor semper pellentesque non ac ligula. Ut gravida in tortor vel accumsan. 
-                Integer sodales sit amet lacus a cursus. Integer finibus purus sed urna dictum, sed ultrices augue gravida. Donec arcu est, pharetra at convallis vel, 
-                dignissim tempus augue. Pellentesque euismod dolor sed imperdiet elementum. Proin dapibus mauris ac neque pretium, sagittis ultrices orci facilisis.
-                Praesent a risus neque. Cras lacinia lectus non consequat hendrerit. Aenean eget augue risus. Nunc est orci, blandit sit amet varius vitae, pharetra 
-                eget turpis. Sed condimentum odio tristique justo volutpat, eu suscipit nibh venenatis. Sed sed tellus sit amet nulla consequat ornare at vel sapien. 
-                Nam vitae lacus id dui feugiat iaculis eu et nulla. Suspendisse eget fermentum eros, a commodo felis. Praesent vulputate leo mauris, quis faucibus elit 
-                commodo nec. Donec luctus augue at varius imperdiet. Sed rutrum, ex non efficitur suscipit, dui eros efficitur lorem, sagittis placerat justo sapien 
-                quis nunc.
+                Integer sodales sit amet lacus a cursus.
             </p>
         </div>
         <button class="button" onclick="clickHandler()">Add Class</button>
-        <div class="subsection" id='classes'></div>
+        <div class="classlist" id='classes'></div>
         </body>
         <footer>
         Brought to you by the bear gang.

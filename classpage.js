@@ -22,10 +22,9 @@ function movePanels(className){
       dragging = true;
       var side = $('.sectionleft');
       $(document).mousemove(function(ex){
-        side.css("width", ex.pageX +2);
+        side.css("width", ex.pageX+2);
       });
-    });
-    
+    }); 
     $(document).mouseup(function(e){
       if (dragging) 
       {

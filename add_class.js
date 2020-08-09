@@ -7,7 +7,7 @@ function clickHandler() {
     */
     
     let div = document.createElement("div");
-    div.setAttribute("class", "section");
+    div.setAttribute("class", "classcard");
     div.setAttribute("id", "Class");
     
     let header = document.createElement("h1");
@@ -32,9 +32,9 @@ function clickHandler() {
     imgdiv.appendChild(img);
     div.appendChild(imgdiv);
 
-    let p = document.createElement("p");
+    /*let p = document.createElement("p");
     p.appendChild(document.createTextNode("Text"));
-    div.appendChild(p);
+    div.appendChild(p);*/
 
     document.getElementById('classes').appendChild(div);  
 
