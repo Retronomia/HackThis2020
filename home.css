@@ -192,6 +192,8 @@ body{
     min-width: 100%;
     text-align:center;
     height:auto;
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
 .button {
     background-color: #501F3A;

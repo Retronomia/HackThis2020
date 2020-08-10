@@ -44,6 +44,22 @@ function execCmd(command){
 function execCmdWithArg(command,arg){
   richText.document.execCommand(command, false, arg);
 }
+/**COLOR PICKER */
+function execForeColor(command,arg){
+  richText.document.execCommand(command, false, arg);
+  document.getElementById('foreColor').style.backgroundColor=arg; 
+}
+function execBackColor(command,arg){
+  richText.document.execCommand(command, false, arg);
+  document.getElementById('hiliteColor').style.backgroundColor=arg; 
+}
+function colorForePicker(){
+    $("#colorForePicker").click();
+}
+function colorBackPicker(){
+  $("#colorBackPicker").click();
+}
+/**TOGGLES*/
 function toggleSource(){
   if (showingSourceCode){
     richText.document.getElementByTagName('body')[0].innerHTML = richText.document.getElementByTagName('body')[0].textContent;
@@ -60,5 +76,13 @@ function toggleEdit(){
   }else{
     richText.document.designMode='On';
     isInEditMode = true;
+  }
+}
+
+
+function format(){
+  headerFormats = document.getElementsByClassName('wordHeader');
+  for (i = 0; i < headerFormats.length; i++){
+    console.log(headerFormats[i].value);
   }
 }
