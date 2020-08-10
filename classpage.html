@@ -13,14 +13,14 @@
         <title>ANOTHER DUCKLING NOTE APP</title>
         <script src="https://kit.fontawesome.com/8f2b175dec.js" crossorigin="anonymous"></script>
     </head>
-    <body onload="hideTd('td'); movePanels('td'); enableEditMode(); format();">
+    <body onload="hideTd(); movePanels('td'); enableEditMode(); format(); addSection(); addPg();">
     <div class='main-container'>
     <div class="header">
         <div id="left">
             <a href = "home.html" class=""><img src="title.png"></img></a>
         </div>
             <input type="text" placeholder="Search.."></input>
-            <button type="submit"><i class="fa fa-search"><img src="searchicon.png"></img></i></button>
+            <button type="submit"><img src="searchicon.png"></img></button>
         <div id="right">
             <a href="dashboard.html"class="">Notes</a>
             <a href="Login_page/login.html"class="">Sign In</a>
@@ -29,26 +29,29 @@
     <div class='appcontainer'>
         <div class='sectionleft'>
             <div id='settingbar'>
-                <button><i class="fa fa-plus"></i></button>
+                <button class="addsection"><i class="fa fa-plus"></i></button>
                 <button><i class="fa fa-trash"></i></button>
             </div>
             <div id='classtitle'><h1>CS 181 (Wernicke)</h1></div>
-            <div class='item collapsible' id='sectiontitle'><button type='button'><h1>Chapter 1</h1></button><button><i class="fa fa-plus"></i></button></div>
+            <div class='item collapsible' id='sectiontitle'><div class='collapsesect'><button class='secttext' contentEditable="true" type='button'><h1>Chapter 1</h1></button></div><button class="addpage" " id='sectbutton'><i class="fa fa-plus"></i></button></div>
             <div class='sectioncontent' style='display:block;'>      
                 <button type='button' class='item' id='filetitle'><h1>ADC Rengar > that Vayne who flamed me yesterday</h1></button>
                 <button type='button' class='item' id='filetitle'><h1>Banana</h1></button>
                 <button type='button' class='item' id='filetitle'><h1>Trains Planes and Plantains</h1></button>
                 <button type='button' class='item' id='filetitle'><h1>Why You Are An All Star</h1></button>
             </div>
-            <button type='button' class='item collapsible' id='sectiontitle'><h1>Chapter 2</h1></button>
+            <div class='item collapsible' id='sectiontitle'><div class='collapsesect'><button class='secttext' contentEditable="true" type='button'><h1>Chapter 2</h1></button></div><button class="addpage" id='sectbutton'><i class="fa fa-plus"></i></button></div>
             <div class='sectioncontent' style='display:block;'>  
                 <button type='button' class='item'id='filetitle'><h1>Actual Homework</h1></button>
                 <button type='button' class='item'id='filetitle'><h1>Fake Homework</h1></button>
             </div>
         </div><!--
         --><div class='sectionright'>
-            <div id="dragbar"></div>
+            <!--<div id="dragbar"></div>-->
             <div id='textEditInfo'>
+                <div id='section'>
+                    <button onClick="collapseToggle();"><i class="fa fa-caret-square-left"></i></button>
+                </div>
                 <div id='section'>
                     <button onClick="execCmd('undo');"><i class="fa fa-undo"></i></button>
                     <button onClick="execCmd('redo');"><i class="fa fa-repeat"></i></button>
@@ -95,13 +98,13 @@
                 </div>
                 <div id='section'>
                     <select onchange="execCmdWithArg('formatBlock',this.value);">
-                        <option class='wordHeader' value="HR">HR</button>
-                        <option class='wordHeader' value="H1">H1</button>
-                        <option class='wordHeader'value="H2">H2</button>
-                        <option class='wordHeader'  value="H3">H3</button>
-                        <option class='wordHeader'value="H4">H4</button>
-                        <option class='wordHeader' value="H5">H5</button>
-                        <option class='wordHeader' value="H6">H6</button>
+                        <option class='wordHeader' value="HR" selected></option><p>HR</p></option>
+                        <option class='wordHeader' value="H1"><h1>H1</h1></option>
+                        <option class='wordHeader'value="H2"><h2>H2</h2></option>
+                        <option class='wordHeader'  value="H3"><h3>H3</h3></option>
+                        <option class='wordHeader'value="H4"><h4>H4</h4></option>
+                        <option class='wordHeader' value="H5"><h5>H5</h5></option>
+                        <option class='wordHeader' value="H6"><h6>H6</h6></option>
                     </select>
                     <button onClick="execCmd('insertHorizontalRule');">HR</button>
                     <button onClick="toggleSource();"><i class="fa fa-code"></i></button>

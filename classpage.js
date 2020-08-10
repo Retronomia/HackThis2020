@@ -1,11 +1,9 @@
 
-function hideTd(className){
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
-    
-    for (i = 0; i < coll.length; i++) {
+function hideTd(){
+    var coll = document.getElementsByClassName("collapsesect");
+    for (var i = 0; i < coll.length; i++) {
       coll[i].addEventListener("click", function() {
-        var content = this.nextElementSibling;
+        var content = this.parentElement.nextElementSibling;
         if (content.style.display == "block") {
           content.style.display = "none";
         } else {
@@ -13,6 +11,67 @@ function hideTd(className){
         }
       });
     }
+}
+function addPg(){
+  var coll = document.getElementsByClassName("addpage");
+  for (var i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      var content = this.parentElement.nextElementSibling;
+      var button = document.createElement("button");
+      button.setAttribute("class", "item");
+      button.setAttribute("id", "filetitle");
+      button.innerHTML = "<h1>New Page</h1>";
+      content.appendChild(button);
+    });
+  }
+}
+
+function addSection(){
+  var coll = document.getElementsByClassName("addsection");
+  for (var i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      var content = document.getElementById("classtitle").parentElement;
+      var divouter = document.createElement("div");
+      divouter.setAttribute("class", "item collapsible");
+      divouter.setAttribute("id", "sectiontitle");
+      content.append(divouter);
+      var divinner = document.createElement("div");
+      divinner.setAttribute("class","collapsesect")
+      divouter.appendChild(divinner);
+      var button = document.createElement("button");
+      button.setAttribute("class", "secttext");
+      button.setAttribute("contentEditable", "true");
+      button.setAttribute("type","button");
+      button.innerHTML = "<h1>New Section</h1>";
+      divinner.appendChild(button);
+      var button2 = document.createElement("button");
+      button2.setAttribute("class","addpage")
+      button2.setAttribute("id","sectbutton")
+      divouter.appendChild(button2);
+      var i = document.createElement("i");
+      i.setAttribute("class","fa fa-plus")
+      button2.appendChild(i);
+      /**add section */
+      var divsection = document.createElement("div");
+      divsection.setAttribute("class", "sectioncontent");
+      divsection.setAttribute("style", "display:block;");
+      content.append(divsection);
+      /** add listener*/
+      button2.addEventListener("click", function() {
+        console.log(button2.parentElement);
+        var newcontent = button2.parentElement.nextElementSibling;
+        var newbutton = document.createElement("button");
+        newbutton.setAttribute("class", "item");
+        newbutton.setAttribute("id", "filetitle");
+        newbutton.innerHTML = "<h1>New Page</h1>";
+        newcontent.append(newbutton);
+      });
+    });
+  }
+}
+function collapseToggle(){
+  var left= document.getElementByTagName('sectionleft');
+  console.log(left);
 }
 
 function movePanels(className){

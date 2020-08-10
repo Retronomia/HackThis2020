@@ -69,15 +69,45 @@
 }
 .appcontainer .sectionleft #sectiontitle{
     background-color:#FEB246;
-    padding-bottom:.3em;
     width:100%;
     word-wrap: break-word;
     font-size: .7em;
     box-sizing: border-box;
-    cursor: pointer;
+    outline:none;
+    text-align:left;
+}
+.appcontainer .sectionleft .secttext{
+    background-color: rgba(255, 255, 255, 0);
+    overflow: visible;
+    word-wrap: break-word;
+    font-size: 1em;
+    box-sizing: border-box;
     outline:none;
     text-align:left;
     padding-left: .5em;
+    border:none;
+}
+.appcontainer .sectionleft .collapsesect{
+    background-color: rgba(255, 255, 255, 0);
+    width:92%;
+    overflow: visible;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    display:inline-block;
+    cursor: pointer;
+    outline:none;
+    border:none;
+}
+.appcontainer .sectionleft #sectbutton{
+    background-color:#ffcf8c;
+    width:8%;
+    height:3em;
+    border:none;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline:none;
+    text-align:center;
 }
 .appcontainer .sectionleft #filetitle{
     background-color: white;
@@ -127,7 +157,7 @@
 }
 .sectionright #richtext{
     height:50vh;
-    width: 50vw;
+    width: 100%;
     flex-grow: 1;
     display:inline-flex;
     background-color: white;
@@ -139,6 +169,13 @@
     padding: .5em;
     margin-left:.1em;
     margin-right:.1em;
+    outline:none;
+}
+.sectionright #textEditInfo button:hover{
+    background-color:#e9e9e9;
+}
+.sectionright #textEditInfo button:active{
+    background-color:#cfcfcf;
 }
 #foreColor{
     float:left;
