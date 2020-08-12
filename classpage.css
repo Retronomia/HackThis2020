@@ -156,7 +156,7 @@
     overflow:hidden;
 }
 .sectionright #richtext{
-    height:50vh;
+    height:95vh;
     width: 100%;
     flex-grow: 1;
     display:inline-flex;

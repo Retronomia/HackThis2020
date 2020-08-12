@@ -1,0 +1,57 @@
+*{
+    margin:0;
+    padding:0;
+}
+@media all {
+	.page-break	{ display: none; }
+}
+
+@media print {
+	.page-break	{ display: block; page-break-before: always; }
+}
+body{
+    background-color: grey;
+    zoom: 80%;
+    display: inline-block;
+}
+div.pagedivide{
+    width: 100%;
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+div.page{
+    width: 8.5in;
+    height: 11in;
+    page-break-after: always;
+    page-break-inside: avoid;
+    background-color: white;
+    margin-bottom: 20px;
+    position:relative;
+  }
+.main{
+    max-height: 9in;
+    position: relative;
+    padding-left: 1in;
+    padding-right: 1in;
+    width: 7in;
+    word-wrap: break-word;
+}
+  .header{
+      padding: 0 1in .5in 1in;
+      min-height: .5in !important;
+      max-height: 5.5in;
+      display:block;
+      resize:none;
+      word-wrap: break-word;
+      width: 6.5in;
+  }
+  .footer{
+    padding: 0 1in .5in 1in;
+    position:absolute;
+    bottom:0;
+    min-height: .5in;
+    width: 6.5in;
+    word-wrap: break-word;
+    vertical-align: text-bottom;
+}
