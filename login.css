@@ -20,6 +20,9 @@ body{
     width:100%;
     flex-wrap:wrap;
 }
+form{
+    min-width: 100%;
+}
 .image{
     min-width: 100%;
     text-align:center;
@@ -32,11 +35,11 @@ img{
     justify-content: center;
 
 }
-.email{
+.username{
     min-width: 100%;
     text-align:center;
 }
-.email input{
+.username input{
     width: 15em;
     margin-top: .25em;
     margin-bottom: .25em;
@@ -48,7 +51,7 @@ img{
     outline: none;
     border: none;
 }
-.email p{
+.username p{
     color:white;
     font-size: 1.5em;
 }
