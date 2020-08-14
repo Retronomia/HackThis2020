@@ -1,4 +1,3 @@
-
 function clickHandler() {
     /*<div class='section'>
             <div><input>DOE</input></div>
@@ -30,14 +29,15 @@ function clickHandler() {
         parent.id = event.target.innerHTML;
 
         let imgdiv = parent.getElementsByClassName("imgdiv")[0];
-        imgdiv.setAttribute("onclick", "location.href=\"classpage.html?class=" + event.target.value + "\";");
+        let className = event.target.value;
+        imgdiv.setAttribute("onclick", "location.href=\"classpage.html?class=" + className + "\";  localStorage.setItem(\"className\",className);");
     });
     div2.appendChild(header);
 
 
     let imgdiv = document.createElement("div");
     imgdiv.setAttribute("class", "imgdiv");
-    imgdiv.setAttribute("onclick", "location.href=\"classpage.html?class=" + "Class" + "\";");
+    imgdiv.setAttribute("onclick", "location.href=\"classpage.html?class=" + "Class" + "\";  localStorage.setItem(\"className\",\"Class\");");
     imgdiv.setAttribute("style", "cursor: pointer;");
     let img = document.createElement("img");
     img.src = "thonq.png";

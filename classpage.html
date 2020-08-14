@@ -13,7 +13,7 @@
         <title>ANOTHER DUCKLING NOTE APP</title>
         <script src="https://kit.fontawesome.com/8f2b175dec.js" crossorigin="anonymous"></script>
     </head>
-    <body onload="hideTd(); movePanels('td'); enableEditMode(); addSection(); addPg();">
+    <body onload="movePanels('td'); enableEditMode(); addSection(); addPg(); onLoad();">
     <div class='main-container'>
     <div class="header">
         <div id="left">
@@ -33,17 +33,16 @@
                 <button><i class="fa fa-trash"></i></button>
             </div>
             <div id='classtitle'><h1>CS 181 (Wernicke)</h1></div>
-            <div class='item collapsible' id='sectiontitle'><div class='collapsesect'><button class='secttext' contentEditable="true" type='button'><h1>Chapter 1</h1></button></div><button class="addpage" " id='sectbutton'><i class="fa fa-plus"></i></button></div>
+            <div class='item collapsible' id='sectiontitle'><div class='collapsesect'><button class='secttext' type='button'><span class="spaneditsection" contentEditable="true" >Chapter 1</span></button></div><button class="addpage" " id='sectbutton'><i class="fa fa-plus"></i></button></div>
             <div class='sectioncontent' style='display:block;'>      
-                <button type='button' class='item' id='filetitle'><h1>Psychology 101</h1></button>
-                <button type='button' class='item' id='filetitle'><h1>Cognitive Psychology</h1></button>
-                <button type='button' class='item' id='filetitle'><h1>Neurology</h1></button>
-                <button type='button' class='item' id='filetitle'><h1>Why You Are An All Star</h1></button>
+                <button type='button' class='item' id='filetitle'><span class="spaneditdoc" contentEditable="true">Psychology 101</span></button>
+                <button type='button' class='item' id='filetitle'><span class="spaneditdoc" contentEditable="true">Psychology 102</span></button>
+                <button type='button' class='item' id='filetitle'><span class="spaneditdoc" contentEditable="true">Psychology 103</span></button>
             </div>
-            <div class='item collapsible' id='sectiontitle'><div class='collapsesect'><button class='secttext' contentEditable="true" type='button'><h1>Chapter 2</h1></button></div><button class="addpage" id='sectbutton'><i class="fa fa-plus"></i></button></div>
+            <div class='item collapsible' id='sectiontitle'><div class='collapsesect'><button class='secttext' type='button'><span class="spaneditsection" contentEditable="true" >Chapter 2</span></button></div><button class="addpage" " id='sectbutton'><i class="fa fa-plus"></i></button></div>
             <div class='sectioncontent' style='display:block;'>  
-                <button type='button' class='item'id='filetitle'><h1>Actual Homework</h1></button>
-                <button type='button' class='item'id='filetitle'><h1>Fake Homework</h1></button>
+                <button type='button' class='item' id='filetitle'><span class="spaneditdoc" contentEditable="true">Fake Homework</span></button>
+                <button type='button' class='item' id='filetitle'><span class="spaneditdoc" contentEditable="true">Actual Homework</span></button>
             </div>
         </div><!--
         --><div class='sectionright'>
