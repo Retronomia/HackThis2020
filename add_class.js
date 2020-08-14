@@ -28,9 +28,10 @@ function clickHandler() {
         let parent = event.target.parentNode.parentNode;
         parent.id = event.target.innerHTML;
 
-        let imgdiv = parent.getElementsByClassName("imgdiv")[0];
         let className = event.target.value;
-        imgdiv.setAttribute("onclick", "location.href=\"classpage.html?class=" + className + "\";  localStorage.setItem(\"className\",className);");
+        let imgdiv = parent.getElementsByClassName("imgdiv")[0];
+        imgdiv.setAttribute("onclick", "location.href=\"classpage.html?class=" + className + "\";");
+        localStorage.setItem("className",className);
     });
     div2.appendChild(header);
 
