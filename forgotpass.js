@@ -68,11 +68,8 @@ function onLoad(){
 function confirmUser(){
     $.getJSON('data/users.json', function (data) {
         $.each(data.Users, function(index, element) {
-            if($('.uid').val()==element.Username){
-                if($('.pwd').val()==element.Password){
-                    localStorage.setItem("Username",$('.uid').val());
-                    window.location.href = "home.html";
-                }
+            if($('.email').val()==element.email){
+                window.location.href = "login.html";
             }
         });
         

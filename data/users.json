@@ -1,9 +1,9 @@
 {
 	"Users":[
 	{	
-		"Id": 1,
 		"Username": "Doug_Duckling",
-		"Password": "password"
+		"Password": "password",
+		"email": "doug@duckling.com"
 	}
 	]
 }
