@@ -1,3 +1,4 @@
+
 function clickHandler() {
     /*<div class='section'>
             <h1>DOE</h1>
@@ -8,21 +9,31 @@ function clickHandler() {
     
     let div = document.createElement("div");
     div.setAttribute("class", "classcard");
-    div.setAttribute("id", "Class");
-    const colors = ["#1aacf4","#b61af4","#1a4df4","#ed1af4","#1af480","#f48e1a","#f41a34"];
+    div.setAttribute("id", "Class classcard");
+    const colors = ["#1aacf4","#b61af4","#1a4df4","#ed1af4","#1af480","#f48e1a","#f41a34","#c51af4","#f48b1a"];
     const random = Math.floor(Math.random() * colors.length);
     div.style.backgroundColor=colors[random];
-    let header = document.createElement("h1");
+
+    let div2 = document.createElement("div");
+    div2.setAttribute("class", "headersect");
+    div.appendChild(div2);
+
+
+    let header = document.createElement("input");
     header.appendChild(document.createTextNode("Class"));
     header.setAttribute("contenteditable", "true");
+    header.setAttribute("maxlength", "12");
+    header.setAttribute("value", "Class");
+    header.setAttribute("class","classtitle")
     header.addEventListener("keyup", function(event) {
         let parent = event.target.parentNode;
         parent.id = event.target.innerHTML;
 
         let imgdiv = parent.getElementsByClassName("imgdiv")[0];
-        imgdiv.setAttribute("onclick", "location.href=\"classpage.html?class=" + parent.id + "\";");
+        var ClassName = parent.getElementsByClassName("classtitle")[0].value ;
+        imgdiv.setAttribute("onclick", "location.href=\"classpage.html?class=" + ClassName + "\";");
     });
-    div.appendChild(header);
+    div2.appendChild(header);
 
 
     let imgdiv = document.createElement("div");
