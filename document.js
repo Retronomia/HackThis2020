@@ -1,3 +1,4 @@
+
 function footerUp(){
     console.log('doot');
     coll=document.getElementsByName('footer');
@@ -9,4 +10,14 @@ function footerUp(){
           content.style.display = "block";
         }
       });
+}
+
+function getFocus(arg){
+    arg.style.backgroundColor = "red";
+    arg.removeEventListener('click',getFocus(arg));
+    document.addEventListener('click',offClick(arg));
+}
+function offClick(arg){
+    arg.style.backgroundColor = "white";
+    document.removeEventListener('click',offClick(arg));
 }

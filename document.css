@@ -26,7 +26,8 @@ div.page{
     page-break-after: always;
     page-break-inside: avoid;
     background-color: white;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
     position:relative;
   }
 .main{
@@ -38,13 +39,14 @@ div.page{
     word-wrap: break-word;
 }
   .header{
-      padding: 0 1in .5in 1in;
+      padding: .5in 1in 0 1in;
       min-height: .5in !important;
       max-height: 5.5in;
       display:block;
       resize:none;
       word-wrap: break-word;
       width: 6.5in;
+      outline:none;
   }
   .footer{
     padding: 0 1in .5in 1in;

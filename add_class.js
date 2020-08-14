@@ -9,7 +9,9 @@ function clickHandler() {
     let div = document.createElement("div");
     div.setAttribute("class", "classcard");
     div.setAttribute("id", "Class");
-    
+    const colors = ["#1aacf4","#b61af4","#1a4df4","#ed1af4","#1af480","#f48e1a","#f41a34"];
+    const random = Math.floor(Math.random() * colors.length);
+    div.style.backgroundColor=colors[random];
     let header = document.createElement("h1");
     header.appendChild(document.createTextNode("Class"));
     header.setAttribute("contenteditable", "true");
