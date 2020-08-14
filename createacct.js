@@ -77,15 +77,15 @@ function confirmUser(){
             result=true;
         });
         if (result=true){
+            localStorage.setItem("Username",$('.uid').val());
+            var jsonData = {email: $('.email').val(), Username: $('.uid').val(), Password: $('.pwd').val()};
             $.ajax({
-                url: 'data/users.json',
+                url: 'http://localhost:7879/data/users.json',
                 type: 'POST',
-                data: 'Username=' + $('.uid').val() + 'Password=' + $('.pwd').val(),
-                dataType: 'text',
-                success: function() {
+                contentType: 'application/json',
+                data: jsonData,
+                success: function(result) {
                     alert('success');
-                    localStorage.setItem("Username",$('.uid').val());
-                    window.location.href = "home.html";
                 }
             });
         }
