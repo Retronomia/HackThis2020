@@ -77,7 +77,6 @@ function confirmUser(){
             result=true;
         });
         if (result=true){
-            localStorage.setItem("Username",$('.uid').val());
             var jsonData = {email: $('.email').val(), Username: $('.uid').val(), Password: $('.pwd').val()};
             $.ajax({
                 url: 'http://localhost:7879/data/users.json',
@@ -85,6 +84,7 @@ function confirmUser(){
                 contentType: 'application/json',
                 data: jsonData,
                 success: function(result) {
+                    localStorage.setItem("Username",$('.uid').val());
                     alert('success');
                 }
             });
