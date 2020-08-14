@@ -1,7 +1,7 @@
 
 function clickHandler() {
     /*<div class='section'>
-            <h1>DOE</h1>
+            <div><input>DOE</input></div>
             <div id='imgdiv'><img src="thonq.png"></img></div>
             <p>A deer, a female deer</p>
         </div>
@@ -26,19 +26,18 @@ function clickHandler() {
     header.setAttribute("value", "Class");
     header.setAttribute("class","classtitle")
     header.addEventListener("keyup", function(event) {
-        let parent = event.target.parentNode;
+        let parent = event.target.parentNode.parentNode;
         parent.id = event.target.innerHTML;
 
         let imgdiv = parent.getElementsByClassName("imgdiv")[0];
-        var ClassName = parent.getElementsByClassName("classtitle")[0].value ;
-        imgdiv.setAttribute("onclick", "location.href=\"classpage.html?class=" + ClassName + "\";");
+        imgdiv.setAttribute("onclick", "location.href=\"classpage.html?class=" + event.target.value + "\";");
     });
     div2.appendChild(header);
 
 
     let imgdiv = document.createElement("div");
     imgdiv.setAttribute("class", "imgdiv");
-    imgdiv.setAttribute("onclick", "location.href=\"classpage.html?class=" + div.id + "\";");
+    imgdiv.setAttribute("onclick", "location.href=\"classpage.html?class=" + "Class" + "\";");
     imgdiv.setAttribute("style", "cursor: pointer;");
     let img = document.createElement("img");
     img.src = "thonq.png";

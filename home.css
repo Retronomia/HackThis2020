@@ -111,6 +111,7 @@ body{
     padding-right: 2em;
     padding-bottom:3em;
     border-radius: 1em;
+    outline:none;
     font-family: 'Arimo', sans-serif;
 }
 .center p{
