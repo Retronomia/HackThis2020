@@ -17,7 +17,7 @@
 }
 .header button{
     margin-top: .7em;
-    background-color: #48AB97;
+    background-color: #21ce99;
     border:none;
     padding-top: .2em;
     padding-bottom:.1em;
@@ -27,7 +27,7 @@
     cursor: pointer;
 }
 .header button:active{
-    background-color: #5edfc5;
+    background-color: #21ce99;
 }
 .header button img{
     height: 1.6em;
@@ -46,7 +46,7 @@
     float:left;
  }
 .appcontainer .sectionleft{
-    background-color: #48AB97;
+    background-color: #21ce99;
     width:30em;
     height:95vh;
     max-width: 50%;
