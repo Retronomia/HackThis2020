@@ -9,40 +9,34 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="classpage.js"></script>
+        <script src="home.js"></script>
         <link rel="icon" href="duccicon.png">
         <title>ANOTHER DUCKLING NOTE APP</title>
         <script src="https://kit.fontawesome.com/8f2b175dec.js" crossorigin="anonymous"></script>
     </head>
-    <body onload="movePanels('td'); enableEditMode(); addSection(); addPg(); onLoad();">
+    <body onload="movePanels('td'); enableEditMode(); addSection(); addPg(); onLoad(); onLoadHd();">
     <div class='main-container'>
-    <div class="header">
+    <div class="header"id="headarea">
         <div id="left">
             <a href = "home.html" class=""><img src="title.png"></img></a>
         </div>
-            <input type="text" placeholder="Search.."></input>
-            <button type="submit"><img src="searchicon.png"></img></button>
         <div id="right">
             <a href="dashboard.html"class="">Classes</a>
-            <a href="login.html"class="">Logout</a>
         </div>
     </div>
     <div class='appcontainer'>
         <div class='sectionleft'>
             <div id='settingbar'>
                 <button class="addsection"><i class="fa fa-plus"></i></button>
-                <button><i class="fa fa-trash"></i></button>
+                <button><i class="fa fa-trash"></i></button><!--
+                --><div id='search'>
+                    <input id='search' type="text" placeholder="Search.."></input><button id='search' type="submit"><img id='search' src="searchicon.png"></img></button>
+                </div>
             </div>
-            <div id='classtitle'><h1>Test Class 1</h1></div>
-            <div class='item collapsible' id='sectiontitle'><div class='collapsesect'><button class='secttext' type='button'><span class="spaneditsection" contentEditable="true" >Chapter 1</span></button></div><button class="addpage" " id='sectbutton'><i class="fa fa-plus"></i></button></div>
+            <div id='classtitle'><h1>New Class</h1></div>
+            <div class='item collapsible' id='sectiontitle'><div class='collapsesect'><button class='secttext' type='button'><span class="spaneditsection" contentEditable="true" >New Section</span></button></div><button class="addpage" " id='sectbutton'><i class="fa fa-plus"></i></button></div>
             <div class='sectioncontent' style='display:block;'>      
-                <button type='button' class='item' id='filetitle'><span class="spaneditdoc" contentEditable="true">Psychology 101</span></button>
-                <button type='button' class='item' id='filetitle'><span class="spaneditdoc" contentEditable="true">Psychology 102</span></button>
-                <button type='button' class='item' id='filetitle'><span class="spaneditdoc" contentEditable="true">Psychology 103</span></button>
-            </div>
-            <div class='item collapsible' id='sectiontitle'><div class='collapsesect'><button class='secttext' type='button'><span class="spaneditsection" contentEditable="true" >Chapter 2</span></button></div><button class="addpage" " id='sectbutton'><i class="fa fa-plus"></i></button></div>
-            <div class='sectioncontent' style='display:block;'>  
-                <button type='button' class='item' id='filetitle'><span class="spaneditdoc" contentEditable="true">Fake Homework</span></button>
-                <button type='button' class='item' id='filetitle'><span class="spaneditdoc" contentEditable="true">Actual Homework</span></button>
+                <button type='button' class='item' id='filetitle'><span class="spaneditdoc" contentEditable="true">New File</span></button>
             </div>
         </div><!--
         --><div class='sectionright'>

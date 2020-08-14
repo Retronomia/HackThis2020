@@ -8,14 +8,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="duccicon.png">
         <title>ANOTHER DUCKLING NOTE APP</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="home.js"></script>
     </head>
-    <body>
+    <body onload="onLoadHd();">
     <div class='main-container'>
-    <div class="header">
+    <div class="header" id="headarea">
         <div id="left"><a href = "home.html" class=""><img src="title.png"></img></a></div>
         <div id="right">
-            <a href="dashboard.html"class="">Notes</a>
-            <a href="./login_proceed/index.html"class="">Sign In</a>
+            <a href="dashboard.html"class="" id='note'>Classes</a>
         </div>
     </div>
     <div class='center_container'>

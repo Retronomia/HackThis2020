@@ -1,34 +1,96 @@
-var crypto = require('crypto');
-var sqlite3 = require('sqlite3');
 
-var db = new sqlite3.Database('./users.sqlite3');
+function onLoad(){
+    "use strict";
+    /*==================================================================
+    [ Focus input ]*/
+    $('.val').each(function(){
+        $(this).on('blur',function(){
+            if($(this).val().trim() != "") {
+                $(this).addClass('has-val');
+            }
+            else {
+                $(this).removeClass('has-val');
+            }
+        });
+    });
+    /*==================================================================
+    [ Validate ]*/
+    var input = $('.validate-input .val');
 
-// ...
+    $('.validate-form').on('submit',function(){
+        var check = true;
 
-function hashPassword(password, salt) {
-  var hash = crypto.createHash('sha256');
-  hash.update(password);
-  hash.update(salt);
-  return hash.digest('hex');
-}
+        for(var i=0; i<input.length; i++) {
+            if(validate(input[i]) == false){
+                showValidate(input[i]);
+                check=false;
+            }
+        }
+        console.log(check);
+        return check;
+    });
 
-function(username, password, done) {
-    db.get('SELECT salt FROM users WHERE username = ?', username, function(err, row) {
-    if (!row) return done(null, false);
-    var hash = hashPassword(password, row.salt);
-    db.get('SELECT username, id FROM users WHERE username = ? AND password = ?', username, hash, function(err, row) {
-      if (!row) return done(null, false);
-      return done(null, row);
+
+    $('.validate-form .input100').each(function(){
+        $(this).focus(function(){
+           hideValidate(this);
+        });
+    });
+
+    function validate (input) {
+        if($(input).attr('type') == 'email' || $(input).attr('name') == 'email') {
+            if($(input).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
+                return false;
+            }
+        }
+        else {
+            if($(input).val().trim() == ''){
+                return false;
+            }
+        }
     }
+
+    function showValidate(input) {
+        var thisAlert = $(input).parent();
+
+        $(thisAlert).addClass('alert-validate');
+        
+    }
+
+    function hideValidate(input) {
+        var thisAlert = $(input).parent();
+
+        $(thisAlert).removeClass('alert-validate');
+    }
+    
+    
 }
-
-passport.serializeUser(function(user, done) {
-  return done(null, user.id);
-});
-
-passport.deserializeUser(function(id, done) {
-  db.get('SELECT id, username FROM users WHERE id = ?', id, function(err, row) {
-    if (!row) return done(null, false);
-    return done(null, row);
-  });
-});
+function confirmUser(){
+    $.getJSON('data/users.json', function (data) {
+        console.log(data['Users'][0]);
+        $.each(data.Users, function(index, element) {
+            console.log(element.Username,element.Password);
+            if($('.uid').val()==element.Username){
+                if($('.pwd').val()==element.Password){
+                    localStorage.setItem("Username",$('.uid').val());
+                    window.location.href = "home.html";
+                }
+            }
+        });
+        
+    });
+}
+/*function confirmUser(){
+        $.ajax({
+            url: '/some_server_side_script',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({
+                username: $('.uid').val(),
+                password: $('.pwd').val(),
+            }),
+            success: function(result) {
+                alert('success');
+            }
+        });
+}*/

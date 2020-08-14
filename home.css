@@ -99,7 +99,17 @@ body{
     width:100%;
     padding-top:2em;
     padding-bottom:15em;
-    background-color:#21CE99;
+    background-color:#48AB97;
+}
+.welcomename{
+    color:white;
+    font-size: 1.3em;
+    display:flex;
+    margin-top: .5em;
+    padding-left: 1em;
+}
+.signopt{
+    cursor:pointer;
 }
 .center{
     /*background-color:#501F3A;*/
