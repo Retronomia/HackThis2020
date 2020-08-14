@@ -29,9 +29,9 @@ footer{
     bottom: 0;
     width: 100%;
     height: 3em;
-    font-size: .6em;
+    font-size: 1em;
     color: #e9e9e9;
-    background-color: #0F292F;
+    background-color: #21CE99;
     padding-right: 10px;
     padding-left: 10px;
     clear: both;
@@ -99,7 +99,7 @@ body{
     width:100%;
     padding-top:2em;
     padding-bottom:15em;
-    background-color:#48AB97;
+    background-color:#21CE99;
 }
 .center{
     /*background-color:#501F3A;*/
@@ -153,7 +153,7 @@ body{
     padding-bottom:2em;*/
     align-items:center;
     margin:0;
-    background-color:#102544;
+    background-color:#040d14;
     overflow:hidden;
 }
 .subsection .section{
@@ -170,7 +170,7 @@ body{
     flex-wrap:wrap;
 }
 .subsection .section h1{
-    color:  #DC8D80; 
+    color:  #D0D1D3; 
     font-weight: bold;
     font-size: 2em;
     text-align:center;

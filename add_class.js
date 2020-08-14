@@ -40,7 +40,7 @@ function clickHandler() {
     imgdiv.setAttribute("onclick", "location.href=\"classpage.html?class=" + "Class" + "\";  localStorage.setItem(\"className\",\"Class\");");
     imgdiv.setAttribute("style", "cursor: pointer;");
     let img = document.createElement("img");
-    img.src = "thonq.png";
+    img.src = "books.png";
     imgdiv.appendChild(img);
     div.appendChild(imgdiv);
 
